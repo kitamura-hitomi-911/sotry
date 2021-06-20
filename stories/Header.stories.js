@@ -12,3 +12,7 @@ export default {
 const Template = (args) => createHeader(args);
 
 export const Normal = Template.bind({});
+Normal.args={
+  is_logged_in:true,
+  notice_num:10
+}

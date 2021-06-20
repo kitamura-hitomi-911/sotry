@@ -14,4 +14,13 @@
             vertical-align: top;
         }
     }
+
+    .header-mypage{
+        .mypage-notice_num{
+            background-color:#f00;
+            color:#fff;
+            font-size:$f10;
+            line-height:$line_height_narrow;
+        }
+    }
 }

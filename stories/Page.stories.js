@@ -1,9 +1,12 @@
 import { createPage } from './Page';
-import * as HeaderStories from './Header.stories';
 
 export default {
-  title: 'Templates/Page',
+  title: 'Page',
   argTypes: {
+    page:{
+      control:'select',
+      options: ['TOP', 'ProductDetail'],
+    },
     is_logged_in:{ control: 'boolean' },
     notice_num:{ control: 'number' },
     onLogin: { action: 'onLogin' },
@@ -13,13 +16,9 @@ export default {
 const Template = (args) => createPage(args);
 
 export const LoggedIn = Template.bind({});
-LoggedIn.storyName='ログイン済み';
+LoggedIn.storyName='TOP';
 LoggedIn.args = {
-  is_logged_in:true
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.storyName='未ログイン';
-LoggedOut.args = {
-  is_logged_in:false
+  page:'TOP',
+  is_logged_in:true,
+  notice_num:10
 };
