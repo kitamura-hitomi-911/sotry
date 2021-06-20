@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.list{
+    li{
+        margin:5px 0;
+        color:$keycolor;
+        font-size:$f13;
+        line-height:$line_height_normal;
+    }
+}
+.list.list-note,
+.list.list-dot{
+    li{
+        position: relative;
+        padding-left:1.25em;
+
+    }
+}
+
+.list.list-note{
+    li{
+        &::after{
+            content: "※";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.list.list-dot{
+    li{
+        &::after{
+            content: "・";
+            position: absolute;
+            top: 0;
+            left: .2em;
+        }
+    }
+}
+
+

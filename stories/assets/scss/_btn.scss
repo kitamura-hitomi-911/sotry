@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.btn{
+    display: inline-block;
+    > a,
+    > .btn-no_link{
+        display: block;
+    }
+    > a{
+        background-color:#f00;
+        color:#fff;
+    }
+    &.is-disable{
+        > .btn-no_link{
+            background-color:#ccc;
+            color:#fff;
+        }
+    }
+
+}
