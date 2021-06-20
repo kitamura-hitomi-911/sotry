@@ -9,3 +9,24 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  (story, context) => {
+    const ret = document.createElement('div');
+    ret.className='theme-'+context.globals.Theme;
+    ret.appendChild(story())
+    return ret;
+  }
+]
+
+export const globalTypes = {
+  Theme: {
+    name: 'Theme',
+    description: 'Themeを設定します',
+    defaultValue: 'default',
+    toolbar: {
+      icon: 'circlehollow',
+      items: ['default', 'white', 'black']
+    }
+  }
+}
