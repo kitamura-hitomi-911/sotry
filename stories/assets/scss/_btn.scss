@@ -9,6 +9,14 @@
     > a{
         background-color:#f00;
         color:#fff;
+
+        .theme-black & {
+            background-color:#000;
+        }
+        .theme-white & {
+            background-color:#fff;
+            color:#000;
+        }
     }
     &.is-disable{
         > .btn-no_link{
@@ -16,5 +24,4 @@
             color:#fff;
         }
     }
-
 }

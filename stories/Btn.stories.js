@@ -3,24 +3,23 @@ import { createBtn } from './Btn';
 export default {
   title: 'ATOMS・MOLECULES/Btn',
   argTypes: {
-    label: { control: 'text' },
-    no_link: { control: 'boolean' },
-    theme: {
-      options:['white', 'black'],
-      control: {
-        type: 'select',
-        labels: {white: '白', black: '黒'}
-        },
-    },/*
+    label: {
+      name:'ラベル',
+      description:'ボタンのラベル',
+      control: 'text'
+    },
+    no_link: {
+      name:'リンクの有無',
+      control: 'boolean'
+    },
     size: {
       control: { type: 'select', options: ['small', 'medium', 'large'] },
-    },*/
+    },
     onClick: { action: 'onClick' },
   },
 };
 
 const Template = ({ label, ...args }) => {
-  console.log(createBtn({ label, ...args }));
   return createBtn({ label, ...args });
 };
 
