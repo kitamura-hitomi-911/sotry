@@ -16,7 +16,7 @@ export default {
       control: { type: 'select', options: ['small', 'medium', 'large'] },
     },
     onClick: { action: 'onClick' },
-  },
+  }
 };
 
 const Template = ({ label, ...args }) => {

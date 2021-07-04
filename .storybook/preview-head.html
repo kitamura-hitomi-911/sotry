@@ -1,0 +1,25 @@
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    var vm_test;
+    document.addEventListener("DOMContentLoaded", (e) => {
+        const tgt = document.createElement('div');
+        tgt.id='tgt';
+        document.body.appendChild(tgt);
+        vm_test = Vue.createApp({
+            template:'#hoge',
+            data(){
+                return {
+                    is_show:false
+                }
+            },
+            methods:{
+                show(){
+                    this.is_show=true;
+                },
+                hide(){
+                    this.is_show=false;
+                }
+            }
+        }).mount('#tgt');
+    });
+</script>
