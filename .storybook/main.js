@@ -14,17 +14,22 @@ module.exports = {
       test: /\.scss$/,
       use: [
         'style-loader',
-        'css-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            url: false
+          }
+        },
         'sass-loader',
         {
           loader: 'sass-resources-loader',
           options: {
             resources: ['./stories/assets/scss/_variables.scss'],
-            include: path.resolve(__dirname, '../')
+            // include: path.resolve(__dirname, '../')
           }
         }
       ],
-      include: path.resolve(__dirname, '../'),
+      // include: path.resolve(__dirname, '../'),
     })
     return config
   }

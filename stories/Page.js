@@ -18,6 +18,7 @@ export const createPage = ({ page, is_logged_in = true, notice_num = 0, onLogin 
     <h2>中身入ります。</h2>
     <p>
       中身入ります
+      <img src="./test.jpg" alt="">
     </p>
   </section>
 `;
