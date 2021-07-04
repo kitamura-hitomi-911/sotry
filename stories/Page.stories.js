@@ -11,6 +11,9 @@ export default {
     notice_num:{ control: 'number' },
     onLogin: { action: 'onLogin' },
   },
+  parameters:{
+    layout:'fullscreeen'
+  }
 };
 
 const Template = (args) => createPage(args);

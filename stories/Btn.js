@@ -1,5 +1,6 @@
 import './assets/scss/_btn.scss';
 import copyCodeBlock from '@pickra/copy-code-block';
+import copyCodeBlockOption from './copyCodeBlockOption';
 import ScriptTemplete from './btn.html'
 
 export const createBtn = ({
@@ -36,7 +37,7 @@ export const createBtn = ({
   }
   btn.className = class_name_ary.join(' ');
   ret.appendChild(btn);
-  ret.appendChild( copyCodeBlock(btn.innerHTML,{ shouldReturnDomEl: true}));
+  ret.appendChild( copyCodeBlock(btn.outerHTML,copyCodeBlockOption));
 
   return ret;
 };

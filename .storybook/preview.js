@@ -12,10 +12,15 @@ export const parameters = {
 
 export const decorators = [
   (story, context) => {
-    const ret = document.createElement('div');
-    ret.className='theme-'+context.globals.Theme;
-    ret.appendChild(story())
-    return ret;
+    document.addEventListener("DOMContentLoaded", e => {
+      Array.prototype.forEach.call(document.body.classList, function (class_name, index) {
+        if(class_name.match(/^theme-/)){
+          document.body.classList.remove(class_name);
+        }
+      });
+      document.body.classList.add('theme-'+context.globals.Theme);
+    });
+    return story();
   }
 ]
 
@@ -25,7 +30,7 @@ export const globalTypes = {
     description: 'Themeを設定します',
     defaultValue: 'default',
     toolbar: {
-      icon: 'circlehollow',
+      icon: 'circle',
       items: ['default', 'white', 'black']
     }
   }

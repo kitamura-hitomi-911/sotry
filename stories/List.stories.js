@@ -13,11 +13,13 @@ const Template = ({ ...args }) => {
 export const Normal = Template.bind({});
 
 export const Note = Template.bind({});
+Note.storyName='※';
 Note.args = {
     sub: 'note'
 };
 
 export const Dot = Template.bind({});
+Dot.storyName='・';
 Dot.args = {
     sub: 'dot'
 };
